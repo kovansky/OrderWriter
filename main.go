@@ -1,4 +1,4 @@
-package OrderWriter
+package main
 
 import (
 	"fmt"

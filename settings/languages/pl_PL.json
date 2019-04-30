@@ -1,5 +1,9 @@
 {
   "app": {
-    "title": "Rozkazy ZHP"
+    "title": "Rozkazy ZHP",
+    "title_separator": "-",
+    "writer": {
+      "title": "Pisanie"
+    }
   }
 }

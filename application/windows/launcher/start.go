@@ -1,7 +1,7 @@
 package launcher
 
 import (
-	"github.com/kovansky/rpgUniverse/application"
+	"github.com/kovansky/OrderWriter/application"
 	"github.com/therecipe/qt/core"
 	"github.com/therecipe/qt/widgets"
 )

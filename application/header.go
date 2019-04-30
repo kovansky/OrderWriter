@@ -2,9 +2,9 @@ package application
 
 import (
 	"encoding/json"
-	"github.com/kovansky/rpgUniverse/application/schemas/languages"
-	"github.com/kovansky/rpgUniverse/application/schemas/settings"
-	"github.com/kovansky/rpgUniverse/application/visual"
+	"github.com/kovansky/OrderWriter/application/schemas/languages"
+	"github.com/kovansky/OrderWriter/application/schemas/settings"
+	"github.com/kovansky/OrderWriter/application/visual"
 	"io/ioutil"
 	"os"
 )

@@ -6,7 +6,10 @@
       "title": "Pisanie",
       "new_order": "Nowy rozkaz",
       "order_number": "Numer rozkazu",
-      "order_type": "Typ rozkazu"
-    }
+      "order_type": "Typ rozkazu",
+      "order_number_error": "Numer rozkazu musi być warością liczbową więszką od 0!"
+    },
+    "next": "Dalej",
+    "error": "Błąd"
   }
 }

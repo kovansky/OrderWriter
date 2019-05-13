@@ -4,6 +4,7 @@ import (
 	"github.com/kovansky/OrderWriter/application"
 	"github.com/kovansky/OrderWriter/types"
 	"github.com/therecipe/qt/widgets"
+	"log"
 )
 
 var (
@@ -19,7 +20,12 @@ func RunWriterMain() {
 	window.SetAutoFillBackground(true)
 	window.SetPalette(application.Palettes.WindowPalette)
 
-	runNumberDialog(window)
+	runTypeDialog()
 
 	window.Show()
+}
+
+func showValues() {
+	log.Println("Order type:", orderType.String())
+	log.Println("Order number:", orderNumber)
 }

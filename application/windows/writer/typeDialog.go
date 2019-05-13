@@ -7,8 +7,8 @@ import (
 	"github.com/therecipe/qt/widgets"
 )
 
-func runTypeDialog(parent *widgets.QMainWindow) *widgets.QDialog {
-	dialog := widgets.NewQDialog(parent, core.Qt__Dialog)
+func runTypeDialog() *widgets.QDialog {
+	dialog := widgets.NewQDialog(window, core.Qt__Dialog)
 	dialog.SetWindowTitle(application.GetWinTitle(application.Language.App.Writer.NewOrder))
 
 	label := widgets.NewQLabel2(application.Language.App.Writer.OrderType, dialog, 0)
@@ -19,8 +19,17 @@ func runTypeDialog(parent *widgets.QMainWindow) *widgets.QDialog {
 		input.AddItem(element.String(), core.NewQVariant7(int(element)))
 	}
 
+	button := widgets.NewQPushButton2(application.Language.App.Next, dialog)
+	button.ConnectClicked(func(checked bool) {
+		orderType = types.OrderType(input.CurrentIndex())
+
+		dialog.Close()
+		runNumberDialog()
+	})
+
 	dialogLayout := widgets.NewQFormLayout(dialog)
 	dialogLayout.AddRow(label, input)
+	dialogLayout.AddRow5(button)
 
 	dialog.SetLayout(dialogLayout)
 

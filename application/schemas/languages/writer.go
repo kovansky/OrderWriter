@@ -1,8 +1,9 @@
 package languages
 
 type Writer struct {
-	Title       string `json:"title"`
-	NewOrder    string `json:"new_order"`
-	OrderNumber string `json:"order_number"`
-	OrderType   string `json:"order_type"`
+	Title            string `json:"title"`
+	NewOrder         string `json:"new_order"`
+	OrderNumber      string `json:"order_number"`
+	OrderType        string `json:"order_type"`
+	OrderNumberError string `json:"order_number_error"`
 }

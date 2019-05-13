@@ -3,7 +3,9 @@
     "title": "Rozkazy ZHP",
     "title_separator": "-",
     "writer": {
-      "title": "Pisanie"
+      "title": "Pisanie",
+      "new_order": "Nowy rozkaz",
+      "order_number_query": "Numer rozkazu"
     }
   }
 }

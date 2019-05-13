@@ -7,15 +7,11 @@ import (
 	"github.com/therecipe/qt/widgets"
 )
 
-var (
-	dialog *widgets.QDialog
-)
-
 func runNumberDialog(parent *widgets.QMainWindow) *widgets.QDialog {
-	dialog = widgets.NewQDialog(parent, core.Qt__Dialog)
+	dialog := widgets.NewQDialog(parent, core.Qt__Dialog)
 	dialog.SetWindowTitle(application.GetWinTitle(application.Language.App.Writer.NewOrder))
 
-	label := widgets.NewQLabel2(application.Language.App.Writer.OrderNumberQuery, dialog, 0)
+	label := widgets.NewQLabel2(application.Language.App.Writer.OrderNumber, dialog, 0)
 
 	input := widgets.NewQLineEdit(dialog)
 	input.SetValidator(gui.NewQIntValidator(input))

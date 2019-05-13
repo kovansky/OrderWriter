@@ -5,7 +5,8 @@
     "writer": {
       "title": "Pisanie",
       "new_order": "Nowy rozkaz",
-      "order_number_query": "Numer rozkazu"
+      "order_number": "Numer rozkazu",
+      "order_type": "Typ rozkazu"
     }
   }
 }

@@ -12,3 +12,7 @@ func (orderType OrderType) String() string {
 
 	return names[orderType]
 }
+
+func GetOrderTypes() []OrderType {
+	return []OrderType{Normal, Special}
+}

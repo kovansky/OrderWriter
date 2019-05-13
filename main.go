@@ -8,7 +8,8 @@ import (
 )
 
 var (
-	app *widgets.QApplication
+	app            *widgets.QApplication
+	launcherHolder *widgets.QMainWindow
 )
 
 func main() {
@@ -16,7 +17,15 @@ func main() {
 
 	app = widgets.NewQApplication(len(os.Args), os.Args)
 
-	launcher.RunStart()
+	launcherHolder = launcher.RunStart()
+
+	launcherHolder.Move2(getCenterPoint())
 
 	widgets.QApplication_Exec()
+}
+
+func getCenterPoint() (int, int) {
+	screenRect := app.Desktop().ScreenGeometry(launcherHolder)
+	centerPoint := screenRect.Center()
+	return centerPoint.X(), centerPoint.Y()
 }

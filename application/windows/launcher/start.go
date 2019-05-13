@@ -2,6 +2,7 @@ package launcher
 
 import (
 	"github.com/kovansky/OrderWriter/application"
+	"github.com/kovansky/OrderWriter/application/windows/writer"
 	"github.com/therecipe/qt/core"
 	"github.com/therecipe/qt/widgets"
 )
@@ -10,7 +11,7 @@ var (
 	window *widgets.QMainWindow
 )
 
-func RunStart() {
+func RunStart() *widgets.QMainWindow {
 	window = widgets.NewQMainWindow(nil, 0)
 	window.SetWindowTitle(application.Language.App.Title)
 	window.SetAutoFillBackground(true)
@@ -29,4 +30,8 @@ func RunStart() {
 	area.SetLayout(layout)
 	window.SetCentralWidget(area)
 	window.Show()
+
+	writer.RunWriterMain()
+
+	return window
 }
